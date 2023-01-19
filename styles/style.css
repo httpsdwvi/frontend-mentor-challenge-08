@@ -5,7 +5,10 @@
 }
 
 html {
+    min-height: 100vh;
     font-family: 'Space Grotesk', sans-serif;
+    background-image: url('../images/bg-main-desktop.png');
+    background-repeat: no-repeat;
 }
 
 :root {
@@ -15,16 +18,10 @@ html {
     --light-grayish-violet: hsl(270, 3%, 87%);
     --dark-grayish-violet: hsl(279, 6%, 55%);
     --very-dark-violet: hsl(278, 68%, 11%);
-
-}
-
-input {
-    width: 380px;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     gap: 125px;
@@ -89,10 +86,45 @@ input {
     margin-left: 300px;
 }
 
+.personal-info-container {
+    width: auto;
+}
 
 .personal-info {
+    width: auto;
     display: flex;
     flex-direction: column;
+    gap: 30px;
+}
+
+.personal-info-date {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+button {
+    height: 55px;
+    width: 380px;
+    border: none;
+    background-color:hsl(278, 94%, 30%);
+    color: var(--white);
+    border-radius: 15px;
+}
+
+.card-pi-name, .card-pi-number {
+    width: 100%;
+    height: 40px;
+}
+
+.card-pi-month, .card-pi-year {
+    width: 80px;
+    height: 40px;
+}
+
+.card-pi-cvc {
+    width: 100%;
+    height: 40px;
 }
 
 .personal-info-success {
@@ -104,6 +136,12 @@ input {
     margin-top: -35px;
     font-size: 11px;
     text-align: center;
+}
+
+input {
+    border-radius: 15px;
+    border: none;
+    outline: 1px solid var(--dark-grayish-violet);
 }
 
 .attribution a {
